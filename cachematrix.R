@@ -1,7 +1,9 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions store the inverse of a matrix in cache such that this inverse only has to be calculated once. 
 
-## Write a short comment describing this function
+
+
+## Similar to the example code for caching the mean of a vector, this function makeCacheMatrix
+## calculates the inverse of a square invertible matrix and stores the inverse of it in cache.
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -17,8 +19,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
-
+## The function cacheSolve gets the inverse of the square invertible matrix x from cache if it has been calculated before.
+## If it has not been calculated before, it calculates the inverse and stores it in cache.
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()ma
         if(!is.null(m)) {
